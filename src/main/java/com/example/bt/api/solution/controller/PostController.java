@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class PostController {
 
     @Autowired
     private GetPostServiceImpl getPostServiceImpl;
 
-    @GetMapping(path="posts")
+    @GetMapping(path="/posts")
     public @ResponseBody List<Post> getAllPosts() {
         return getPostServiceImpl.getPosts();
     }

@@ -60,7 +60,7 @@ public class UserControllerTests {
                 getUserServiceImpl.getUsers()).thenReturn(usersList);
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/users");
+                .get("/admin/users");
 
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 

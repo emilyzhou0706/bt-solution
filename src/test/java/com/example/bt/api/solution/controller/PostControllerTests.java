@@ -62,7 +62,7 @@ public class PostControllerTests {
                 getPostServiceImpl.getPosts()).thenReturn(postList);
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/posts");
+                .get("/admin/posts");
 
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 
